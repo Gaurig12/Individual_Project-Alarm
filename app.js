@@ -12,7 +12,6 @@ app.use(express.json());
 
 app.use('/', Routes);
 
-//PORT = process.env.BACKEND_PORT
 app.get('/getData',function(req,res){ 
     res.sendFile(__dirname+'/index.html') 
 }) 
