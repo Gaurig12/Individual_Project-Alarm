@@ -1,5 +1,4 @@
 const model = require('../model/model');
-
 const controller = {
    
     createEntry: async(req,res) => {
@@ -15,6 +14,7 @@ const controller = {
             console.error('Error creating entry:',error);
             res.status(500).json({errorce: 'Server error'});
         }
+       
     },
 
     getData: async(req,res) => {
@@ -25,6 +25,8 @@ const controller = {
             res.status(500).json({errorccc: 'Server error'});
         }
     },
+
+   
     editData: async(req,res) => {
         const id = req.params.sensor_name;
         const editDbInfo = req.body;
